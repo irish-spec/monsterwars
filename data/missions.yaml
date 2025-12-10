@@ -1,0 +1,214 @@
+- id: tutorial_hunt
+  name: First Street Hunt
+  district: Neon Alley
+  stamina_cost: 6
+  recommended_power: 180
+  rewards:
+    cash: 350
+    dna_shards:
+      affinity: Street
+      amount: 5
+    gear_components: 1
+  encounters:
+    - type: monster
+      enemy_team: [ember_jackal]
+    - type: event
+      effect: Free capture attempt for low-rarity monster.
+
+- id: alley_sweep
+  name: Alley Sweep
+  district: Neon Alley
+  stamina_cost: 8
+  recommended_power: 260
+  rewards:
+    cash: 520
+    notoriety: 4
+    dna_shards:
+      affinity: Fire
+      amount: 4
+  encounters:
+    - type: wave
+      enemy_team: [gutter_golem, ember_jackal]
+  modifiers:
+    - name: Graffiti Pride
+      effect: Street affinity monsters gain 10% stats while here.
+
+- id: rooftop_smash
+  name: Rooftop Smash & Grab
+  district: Neon Alley
+  stamina_cost: 11
+  recommended_power: 430
+  rewards:
+    cash: 1050
+    gear_components: 2
+    dna_shards:
+      affinity: Air
+      amount: 6
+  encounters:
+    - type: boss
+      enemy_team: [smog_gryphon]
+
+- id: dock_sabotage
+  name: Dock Sabotage
+  district: Harbor District
+  stamina_cost: 10
+  recommended_power: 320
+  rewards:
+    cash: 900
+    reagents: 2
+    influence: 12
+    dna_shards:
+      affinity: Water
+      amount: 8
+  objectives:
+    - type: hack
+      difficulty: medium
+      bonus: Faster idle timers for 30 minutes
+    - type: boss
+      enemy_team: [murkfin, wire_viper]
+
+- id: harbor_raids
+  name: Harbor Protection Rackets
+  district: Harbor District
+  stamina_cost: 12
+  recommended_power: 380
+  rewards:
+    cash: 1200
+    dna_shards:
+      affinity: Water
+      amount: 6
+    notoriety: 6
+  encounters:
+    - type: wave
+      enemy_team: [tidecaller_urchin, murkfin]
+  modifiers:
+    - name: Rolling Fog
+      effect: Water monsters take 10% less damage while fighting here.
+
+- id: freight_theft
+  name: Freight Train Hijack
+  district: Industrial Heights
+  stamina_cost: 14
+  recommended_power: 480
+  rewards:
+    cash: 1400
+    reagents: 4
+    dna_shards:
+      affinity: Tech
+      amount: 10
+    notoriety: 6
+  encounters:
+    - type: wave
+      enemy_team: [gutter_golem, ember_jackal]
+    - type: boss
+      enemy_team: [ghast_mutt]
+  modifiers:
+    - name: Containment Breach
+      effect: Venom affinity moves have +20% damage for both teams.
+    - name: Lab Cameras
+      effect: Higher chance of law-enforcement crackdown if Heat maxes.
+
+- id: lab_raid
+  name: Bio Lab Raid
+  district: Industrial Heights
+  stamina_cost: 15
+  recommended_power: 520
+  rewards:
+    cash: 1650
+    reagents: 5
+    dna_shards:
+      affinity: Tech
+      amount: 12
+    notoriety: 6
+  encounters:
+    - type: wave
+      enemy_team: [gutter_golem, ember_jackal, wire_viper]
+    - type: boss
+      enemy_team: [voltage_panther]
+
+- id: skyline_heist
+  name: Skyline Vault Heist
+  district: Skyline Spires
+  stamina_cost: 16
+  recommended_power: 610
+  rewards:
+    cash: 2100
+    influence: 18
+    dna_shards:
+      affinity: Light
+      amount: 10
+  encounters:
+    - type: event
+      effect: Random boon or trap per floor.
+    - type: boss
+      enemy_team: [aurora_lynx]
+  modifiers:
+    - name: High Altitude
+      effect: Air monsters gain extra Speed but lose Defense.
+
+- id: station_rush
+  name: Old Metro Station Rush
+  district: Forgotten Lines
+  stamina_cost: 9
+  recommended_power: 300
+  rewards:
+    cash: 800
+    dna_shards:
+      affinity: Earth
+      amount: 5
+  encounters:
+    - type: wave
+      enemy_team: [quake_tortoise]
+    - type: event
+      effect: Secret merchant appears; discounts summon costs.
+
+- id: relic_recovery
+  name: Relic Recovery
+  district: Forgotten Lines
+  stamina_cost: 12
+  recommended_power: 440
+  rewards:
+    cash: 1350
+    notoriety: 8
+    dna_shards:
+      affinity: Psychic
+      amount: 7
+  encounters:
+    - type: boss
+      enemy_team: [holo_wisp, ghast_mutt]
+  modifiers:
+    - name: Haunted Rails
+      effect: Shadow monsters gain 10% evasion here.
+
+- id: black_market
+  name: Black Market Lockdown
+  district: Under Bazaar
+  stamina_cost: 13
+  recommended_power: 500
+  rewards:
+    cash: 1500
+    gear_components: 3
+    dna_shards:
+      affinity: Shadow
+      amount: 7
+  encounters:
+    - type: wave
+      enemy_team: [smog_gryphon, holo_wisp]
+    - type: boss
+      enemy_team: [ghast_mutt]
+
+- id: street_duel
+  name: Street Duel PvP
+  district: Asynchronous Arena
+  stamina_cost: 8
+  recommended_power: scalable
+  rewards:
+    cash: 600
+    notoriety: 10
+    season_points: 15
+  encounters:
+    - type: pvp
+      rules: Battle against stored defensive team data; law-enforcement Heat applies.
+  modifiers:
+    - name: Turf Pride
+      effect: Defender gains +10% stats if fighting in their home district.
