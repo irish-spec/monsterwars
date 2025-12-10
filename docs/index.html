@@ -11,7 +11,7 @@
   <header>
     <div class="title-block">
       <h1>MonsterWars Idle</h1>
-      <p class="subtitle">Mafia Wars hustle meets monster collecting — runs right in your browser.</p>
+      <p class="subtitle">Mafia Wars hustle meets monster collecting. Capture beasts, build rackets, and climb districts.</p>
     </div>
     <div class="status-grid" id="status-grid">
       <div class="stat-card"><span class="label">Cash</span><span id="cash" class="value">0</span></div>
@@ -19,27 +19,49 @@
       <div class="stat-card"><span class="label">Heat</span><span class="value" id="heat">0</span></div>
       <div class="stat-card"><span class="label">Capture Kits</span><span class="value" id="capture-kits">0</span></div>
       <div class="stat-card"><span class="label">Team Power</span><span class="value" id="team-power">0</span></div>
+      <div class="stat-card"><span class="label">Notoriety</span><span class="value" id="notoriety">0</span></div>
     </div>
   </header>
 
   <main>
-    <section class="panel" id="mission-panel">
+    <section class="panel" id="district-panel">
       <div class="panel-header">
-        <h2>Missions</h2>
-        <p>Spend stamina, earn cash, stir up heat, and maybe snag a monster.</p>
+        <h2>Districts &amp; Jobs</h2>
+        <p>Pick a turf, then run high-stakes missions with your active squad.</p>
       </div>
       <div class="panel-body">
-        <label for="mission-select">District job:</label>
-        <select id="mission-select"></select>
+        <div id="district-list" class="district-list"></div>
         <div class="mission-meta">
-          <div><strong>Stamina:</strong> <span id="mission-stamina">-</span></div>
-          <div><strong>Recommended Power:</strong> <span id="mission-power">-</span></div>
-          <div><strong>Rewards:</strong> <span id="mission-rewards">-</span></div>
+          <label for="mission-select">Job posting:</label>
+          <select id="mission-select"></select>
+          <div class="meta-grid">
+            <div><strong>District:</strong> <span id="mission-district">-</span></div>
+            <div><strong>Stamina:</strong> <span id="mission-stamina">-</span></div>
+            <div><strong>Recommended Power:</strong> <span id="mission-power">-</span></div>
+            <div><strong>Rewards:</strong> <span id="mission-rewards">-</span></div>
+          </div>
+          <button id="start-mission" class="primary">Start Mission</button>
+          <div class="active-mission" id="active-mission" hidden>
+            <p id="active-mission-text"></p>
+            <div class="progress"><div id="mission-progress"></div></div>
+          </div>
         </div>
-        <button id="start-mission" class="primary">Start Mission</button>
-        <div class="active-mission" id="active-mission" hidden>
-          <p id="active-mission-text"></p>
-          <div class="progress"><div id="mission-progress"></div></div>
+      </div>
+    </section>
+
+    <section class="panel" id="work-panel">
+      <div class="panel-header">
+        <h2>Rackets &amp; Idle Work</h2>
+        <p>Assign monsters to steady jobs. Working monsters can't fight until they're done.</p>
+      </div>
+      <div class="panel-body">
+        <div id="work-list" class="work-list"></div>
+        <div class="work-form">
+          <label for="work-select">Choose racket:</label>
+          <select id="work-select"></select>
+          <label for="work-monster">Assign monster:</label>
+          <select id="work-monster"></select>
+          <button id="assign-work" class="secondary">Assign to Work</button>
         </div>
       </div>
     </section>
@@ -55,14 +77,46 @@
           <select id="monster-select"></select>
           <button id="capture-btn" class="secondary">Attempt Capture</button>
           <p class="hint">Capture success scales with loyalty and your current heat.</p>
-        </div>
-        <div class="team-column">
-          <h3>Team Slots</h3>
-          <div id="team-slots" class="team-slots"></div>
           <label for="collection-select">Add from collection:</label>
           <select id="collection-select"></select>
           <button id="add-to-team" class="secondary">Add to Team</button>
         </div>
+        <div class="team-column">
+          <h3>Team Slots</h3>
+          <div id="team-slots" class="team-slots"></div>
+          <div class="summon">
+            <h4>Summon Den</h4>
+            <p>Spend $300 to lure a random monster or rare recruit.</p>
+            <button id="summon-btn" class="primary">Summon Monster</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="collection-panel">
+      <div class="panel-header">
+        <h2>Collection</h2>
+        <p>Everything you own, including workers that are off making cash.</p>
+      </div>
+      <div class="panel-body">
+        <table class="collection-table">
+          <thead>
+            <tr><th>Name</th><th>Affinity</th><th>Role</th><th>Level</th><th>Atk/Def/Spd</th><th>Status</th></tr>
+          </thead>
+          <tbody id="collection-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="arena-panel">
+      <div class="panel-header">
+        <h2>NPC PvP Arena</h2>
+        <p>Throw your squad against rival outfits for cash, XP, and notoriety.</p>
+      </div>
+      <div class="panel-body">
+        <label for="arena-opponent">Opponent:</label>
+        <select id="arena-opponent"></select>
+        <button id="fight-arena" class="primary">Fight!</button>
       </div>
     </section>
 
