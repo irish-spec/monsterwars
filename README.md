@@ -5,7 +5,6 @@ MonsterWars is a concept for an idle monster-collecting crime saga that fuses Ma
 ## What's here
 - `docs/game_design.md`: High-level vision, core loops, and system design pillars.
 - `docs/roadmap.md`: Milestone plan from foundation to beta and stretch ideas.
-- `docs/index.html`, `docs/styles.css`, `docs/main.js`: A static, data-driven idle prototype that runs fully in the browser.
 - `data/monsters.yaml`: Sample starter monsters with stats, moves, and passives.
 - `data/missions.yaml`: Early mission outlines that mix PvE, PvP, and idle rewards.
 
@@ -13,9 +12,6 @@ MonsterWars is a concept for an idle monster-collecting crime saga that fuses Ma
 - Use the YAML in `data/` as seed content for a combat simulator or client prototype.
 - Expand the design docs with balancing decisions, UI mocks, and tech choices as the project matures.
 - Keep systems deterministic and data-driven so combat logs and economy tuning remain transparent.
-
-## Play the idle prototype
-The `docs/` folder is GitHub Pages–ready. Open `docs/index.html` locally or via GitHub Pages to try the idle Mafia Wars × Pokémon loop using the existing YAML content.
 
 ## Next steps
 1. Build a minimal battle simulator that can parse the YAML monster data.
