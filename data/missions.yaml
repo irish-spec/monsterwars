@@ -1,0 +1,74 @@
+- id: tutorial_hunt
+  name: First Street Hunt
+  district: Neon Alley
+  stamina_cost: 6
+  recommended_power: 180
+  rewards:
+    cash: 350
+    dna_shards:
+      affinity: Street
+      amount: 5
+    gear_components: 1
+  encounters:
+    - type: monster
+      enemy_team: [ember_jackal]
+    - type: event
+      effect: Free capture attempt for low-rarity monster.
+
+- id: dock_sabotage
+  name: Dock Sabotage
+  district: Harbor District
+  stamina_cost: 10
+  recommended_power: 320
+  rewards:
+    cash: 900
+    reagents: 2
+    influence: 12
+    dna_shards:
+      affinity: Water
+      amount: 8
+  objectives:
+    - type: hack
+      difficulty: medium
+      bonus: Faster idle timers for 30 minutes
+    - type: boss
+      enemy_team: [murkfin, wire_viper]
+
+- id: lab_raid
+  name: Bio Lab Raid
+  district: Industrial Heights
+  stamina_cost: 14
+  recommended_power: 480
+  rewards:
+    cash: 1400
+    reagents: 4
+    dna_shards:
+      affinity: Tech
+      amount: 10
+    notoriety: 6
+  encounters:
+    - type: wave
+      enemy_team: [gutter_golem, ember_jackal]
+    - type: boss
+      enemy_team: [ghast_mutt]
+  modifiers:
+    - name: Containment Breach
+      effect: Venom affinity moves have +20% damage for both teams.
+    - name: Lab Cameras
+      effect: Higher chance of law-enforcement crackdown if Heat maxes.
+
+- id: street_duel
+  name: Street Duel PvP
+  district: Asynchronous Arena
+  stamina_cost: 8
+  recommended_power: scalable
+  rewards:
+    cash: 600
+    notoriety: 10
+    season_points: 15
+  encounters:
+    - type: pvp
+      rules: Battle against stored defensive team data; law-enforcement Heat applies.
+  modifiers:
+    - name: Turf Pride
+      effect: Defender gains +10% stats if fighting in their home district.
