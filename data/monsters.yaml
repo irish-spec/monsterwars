@@ -1,0 +1,139 @@
+- id: ember_jackal
+  name: Ember Jackal
+  affinity: Fire
+  role: striker
+  rarity: uncommon
+  stats:
+    hp: 52
+    attack: 64
+    special: 58
+    defense: 41
+    speed: 70
+    grit: 12
+    loyalty: 15
+  moves:
+    - name: Flame Pounce
+      type: Fire
+      effect: High-speed strike with burn chance.
+      heat_cost: 8
+    - name: Ember Trail
+      type: Fire
+      effect: Damage over time zone that persists for 2 turns.
+      heat_cost: 10
+    - name: Street Sense
+      type: Street
+      effect: Raises Speed and Grit for the squad.
+      heat_cost: 6
+  passive: Quickstep (immune to first slow debuff each battle)
+
+- id: wire_viper
+  name: Wire Viper
+  affinity: Tech/Venom
+  role: controller
+  rarity: rare
+  stats:
+    hp: 48
+    attack: 45
+    special: 72
+    defense: 44
+    speed: 66
+    grit: 10
+    loyalty: 18
+  moves:
+    - name: Neural Bite
+      type: Tech
+      effect: Reduces target Speed and disrupts passives for 1 turn.
+      heat_cost: 9
+    - name: Toxic Surge
+      type: Venom
+      effect: Applies stacking poison; third stack detonates for bonus damage.
+      heat_cost: 11
+    - name: Hack Screen
+      type: Tech
+      effect: Shields allies from crits and redirects single-target moves for one round.
+      heat_cost: 12
+  passive: Surge Conductor (Heat costs reduced by 1 when shielded)
+
+- id: gutter_golem
+  name: Gutter Golem
+  affinity: Street/Shadow
+  role: tank
+  rarity: uncommon
+  stats:
+    hp: 82
+    attack: 50
+    special: 35
+    defense: 78
+    speed: 28
+    grit: 20
+    loyalty: 22
+  moves:
+    - name: Alley Guard
+      type: Street
+      effect: Taunt and damage reduction for 2 turns.
+      heat_cost: 12
+    - name: Shadow Cement
+      type: Shadow
+      effect: Lowers enemy Attack and Speed; applies slow terrain.
+      heat_cost: 10
+    - name: Brick Toss
+      type: Street
+      effect: Basic attack with high crit chance when taunting.
+      heat_cost: 6
+  passive: Reinforced (first fatal blow leaves at 1 HP once per combat)
+
+- id: murkfin
+  name: Murkfin
+  affinity: Water
+  role: support
+  rarity: common
+  stats:
+    hp: 61
+    attack: 40
+    special: 55
+    defense: 53
+    speed: 52
+    grit: 14
+    loyalty: 20
+  moves:
+    - name: Murky Barrier
+      type: Water
+      effect: Team-wide shield that scales with Loyalty.
+      heat_cost: 9
+    - name: Undertow
+      type: Water
+      effect: Delays enemy turns and pulls in benched monsters.
+      heat_cost: 10
+    - name: Salvage
+      type: Street
+      effect: Grants cash and reagents on mission completion if Murkfin survives.
+      heat_cost: 0
+  passive: Tidewatch (improves idle income from Dock rackets by 8%)
+
+- id: ghast_mutt
+  name: Ghast Mutt
+  affinity: Psychic/Shadow
+  role: trickster
+  rarity: rare
+  stats:
+    hp: 57
+    attack: 38
+    special: 76
+    defense: 40
+    speed: 63
+    grit: 11
+    loyalty: 19
+  moves:
+    - name: Mind Lash
+      type: Psychic
+      effect: Special attack with chance to confuse.
+      heat_cost: 8
+    - name: Wraith Howl
+      type: Shadow
+      effect: Chance to fear the enemy squad; increases Heat pressure.
+      heat_cost: 12
+    - name: Fade Out
+      type: Shadow
+      effect: Self-evade and Speed boost for 2 turns.
+      heat_cost: 7
+  passive: Haunting Presence (increases Heat cap by 3 for allies)
