@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MonsterWars Idle</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="title-block">
+      <h1>MonsterWars Idle</h1>
+      <p class="subtitle">Mafia Wars hustle meets monster collecting — runs right in your browser.</p>
+    </div>
+    <div class="status-grid" id="status-grid">
+      <div class="stat-card"><span class="label">Cash</span><span id="cash" class="value">0</span></div>
+      <div class="stat-card"><span class="label">Stamina</span><span class="value"><span id="stamina">0</span>/<span id="stamina-max">0</span></span></div>
+      <div class="stat-card"><span class="label">Heat</span><span class="value" id="heat">0</span></div>
+      <div class="stat-card"><span class="label">Capture Kits</span><span class="value" id="capture-kits">0</span></div>
+      <div class="stat-card"><span class="label">Team Power</span><span class="value" id="team-power">0</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" id="mission-panel">
+      <div class="panel-header">
+        <h2>Missions</h2>
+        <p>Spend stamina, earn cash, stir up heat, and maybe snag a monster.</p>
+      </div>
+      <div class="panel-body">
+        <label for="mission-select">District job:</label>
+        <select id="mission-select"></select>
+        <div class="mission-meta">
+          <div><strong>Stamina:</strong> <span id="mission-stamina">-</span></div>
+          <div><strong>Recommended Power:</strong> <span id="mission-power">-</span></div>
+          <div><strong>Rewards:</strong> <span id="mission-rewards">-</span></div>
+        </div>
+        <button id="start-mission" class="primary">Start Mission</button>
+        <div class="active-mission" id="active-mission" hidden>
+          <p id="active-mission-text"></p>
+          <div class="progress"><div id="mission-progress"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="monsters-panel">
+      <div class="panel-header">
+        <h2>Stable &amp; Team</h2>
+        <p>Catch monsters, then slot your best three into the squad.</p>
+      </div>
+      <div class="panel-body monster-flex">
+        <div class="capture-column">
+          <label for="monster-select">Target monster:</label>
+          <select id="monster-select"></select>
+          <button id="capture-btn" class="secondary">Attempt Capture</button>
+          <p class="hint">Capture success scales with loyalty and your current heat.</p>
+        </div>
+        <div class="team-column">
+          <h3>Team Slots</h3>
+          <div id="team-slots" class="team-slots"></div>
+          <label for="collection-select">Add from collection:</label>
+          <select id="collection-select"></select>
+          <button id="add-to-team" class="secondary">Add to Team</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="log-panel">
+      <div class="panel-header">
+        <h2>Street Log</h2>
+        <p>Everything that happens while you idle.</p>
+      </div>
+      <div class="panel-body">
+        <ul id="log"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data-driven: uses the YAML monsters and missions that live in this repo. Ready for GitHub Pages.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
